@@ -65,9 +65,9 @@ export default function Navbar() {
           {/* Brand Logo */}
           <Link href="/" className="flex flex-col group">
             <span className="text-2xl sm:text-2xl font-black tracking-wider text-white flex items-center gap-1">
-              BULAR<span className="text-[#d4af37]">CREST</span>
+              BULAR<span className="text-[#fbbf24]">CREST</span>
             </span>
-            <span className="text-[9px] tracking-[0.2em] font-medium text-slate-400 group-hover:text-slate-300 uppercase transition-colors">
+            <span className="text-[9px] tracking-[0.2em] font-medium text-slate-400 group-hover:text-amber-200 uppercase transition-colors">
               Construction · Design · Home Solutions
             </span>
           </Link>
@@ -80,13 +80,13 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm font-semibold transition-colors py-1 relative ${
                   isActive(link.href)
-                    ? "text-[#d4af37]"
+                    ? "text-[#fbbf24]"
                     : "text-slate-300 hover:text-white"
                 }`}
               >
                 {link.label}
                 {isActive(link.href) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#d4af37] rounded-full" />
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#fbbf24] rounded-full shadow-[0_0_8px_#fbbf24]" />
                 )}
               </Link>
             ))}
@@ -98,7 +98,7 @@ export default function Navbar() {
               href={COMPANY_INFO.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-all flex items-center gap-1.5 text-xs font-semibold"
+              className="p-2.5 px-3.5 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 transition-all flex items-center gap-2 text-xs font-bold shadow-sm"
               title="Chat on WhatsApp"
             >
               <MessageCircle className="w-4 h-4" />
@@ -108,7 +108,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setModalOpen(true)}
-              className="py-2.5 px-4 rounded-xl bg-[#d4af37] hover:bg-[#c59b27] text-slate-950 font-bold text-xs tracking-wide transition-all shadow-md hover:shadow-lg flex items-center gap-1.5"
+              className="py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-400 to-[#f59e0b] hover:from-amber-300 hover:to-amber-500 text-slate-950 font-black text-xs tracking-wide transition-all shadow-md shadow-amber-500/20 flex items-center gap-1.5 active:scale-95"
             >
               <span>Ask for a Price</span>
               <ChevronRight className="w-3.5 h-3.5" />

@@ -40,9 +40,19 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Banner */}
-      <section className="pt-14 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#121722] via-[#0f131c] to-[#0d1017] border-b border-[#1b2230] text-center subtle-grid">
-        <div className="max-w-3xl mx-auto space-y-4">
-          <span className="inline-block text-xs font-bold tracking-widest text-[#d4af37] uppercase bg-[#161c28] px-3.5 py-1.5 rounded-full border border-[#2a3449]">
+      <section className="pt-14 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#121722] via-[#0f131c] to-[#0d1017] border-b border-[#1b2230] text-center relative overflow-hidden">
+        {/* Photographic backdrop with dark overlay */}
+        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none mix-blend-luminosity">
+          <img
+            src={COMPANY_INFO.backdrops.trust}
+            alt="Contact Bularcrest backdrop"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#121722]/90 via-[#0f131c]/90 to-[#0d1017]" />
+        </div>
+
+        <div className="max-w-3xl mx-auto space-y-4 relative z-10">
+          <span className="inline-block text-xs font-bold tracking-widest text-[#fbbf24] uppercase bg-[#161c28] px-4 py-1.5 rounded-full border border-amber-500/30 shadow-md">
             We Are Ready to Assist You
           </span>
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
