@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0d1017;
+  --foreground: #f3f4f6;
+  --primary-gold: #d4af37;
+  --primary-gold-hover: #c59b27;
+  --primary-gold-light: #fef9e7;
+  --charcoal-900: #0d1017;
+  --charcoal-800: #141822;
+  --charcoal-700: #1b212f;
+  --charcoal-600: #252d3d;
+  --charcoal-border: #2e3748;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f5eed0;
+  --color-gold-200: #ecdda4;
+  --color-gold-300: #e1c770;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #c59b27;
+  --color-gold-600: #a77c1d;
+  --color-gold-700: #825b19;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-charcoal-950: #080a0f;
+  --color-charcoal-900: #0d1017;
+  --color-charcoal-850: #11151f;
+  --color-charcoal-800: #161b26;
+  --color-charcoal-700: #1e2535;
+  --color-charcoal-600: #2a3347;
+  --color-charcoal-500: #3b465f;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0d1017;
+  color: #f3f4f6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1017;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3347;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Soft gold glow utilities */
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+.gold-border-glow {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 20px -3px rgba(212, 175, 55, 0.2);
+}
+
+.subtle-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
