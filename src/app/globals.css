@@ -18,7 +18,7 @@
   --charcoal-border: #222d3f;
 }
 
-@theme {
+@theme inline {
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
   --color-gold-200: #fde68a;
