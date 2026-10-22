@@ -16,9 +16,7 @@
   --charcoal-700: #1c2433;
   --charcoal-600: #273347;
   --charcoal-border: #222d3f;
-}
 
-@theme inline {
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
   --color-gold-200: #fde68a;
@@ -38,14 +36,6 @@
 
   --color-orange-400: #fb923c;
   --color-orange-500: #f97316;
-
-  --color-charcoal-950: #06080d;
-  --color-charcoal-900: #0b0e14;
-  --color-charcoal-850: #10141d;
-  --color-charcoal-800: #151b26;
-  --color-charcoal-700: #1c2433;
-  --color-charcoal-600: #273347;
-  --color-charcoal-500: #384661;
 }
 
 body {

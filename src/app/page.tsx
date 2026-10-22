@@ -21,7 +21,23 @@ import {
   Compass,
 } from "lucide-react";
 import { COMPANY_INFO, SERVICES_DATA } from "@/data/servicesData";
-import HeroBuildingCanvas from "@/components/HeroBuildingCanvas";
+import dynamic from "next/dynamic";
+
+const HeroBuildingCanvas = dynamic(
+  () => import("@/components/HeroBuildingCanvas"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="relative w-full h-[360px] sm:h-[420px] md:h-[480px] lg:h-[540px] flex items-center justify-center rounded-2xl overflow-hidden bg-gradient-to-b from-[#141822] via-[#0f1219] to-[#0d1017] border border-[#232b3c] shadow-2xl">
+        <div className="flex flex-col items-center justify-center p-8 text-center text-slate-300">
+          <div className="w-10 h-10 rounded-full border-2 border-amber-400 border-t-transparent animate-spin mb-3" />
+          <p className="text-xs font-semibold text-slate-400">Loading 3D Architecture View...</p>
+        </div>
+      </div>
+    ),
+  }
+);
+
 import ServiceCard from "@/components/ServiceCard";
 import TrustSection from "@/components/TrustSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
