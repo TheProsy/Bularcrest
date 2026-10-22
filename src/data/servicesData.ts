@@ -303,7 +303,7 @@ export const COMPANY_INFO = {
   whatsappNumber: "+2348140002852",
   whatsappLink: "https://wa.me/2348140002852?text=Hello%20Bularcrest%2C%20I%20am%20interested%20in%20discussing%20a%20project%20for%20my%20property.",
   email: "info@bularcrest.com",
-  officeAddress: "Plot 12, Admiralty Way, Lekki Phase 1, Lagos, Nigeria",
+  officeAddress: "",
   serviceAreas: [
     "Lagos (Lekki, Ikoyi, Victoria Island, Ikeja, Mainland & environs)",
     "Abuja (FCT & surrounding areas)",
